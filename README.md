@@ -1,4 +1,4 @@
-# meme_generator
+# Photo Uploader
 
 A new Flutter project.
 
