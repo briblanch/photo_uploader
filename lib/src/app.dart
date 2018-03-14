@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:photo_uploader/src/photo_grid.dart';
 
-class PhotoUploaderApp extends StatefulWidget {
-  @override
-  _PhotoUploaderAppState createState() => new _PhotoUploaderAppState();
-}
-
-class _PhotoUploaderAppState extends State<PhotoUploaderApp> {
+class PhotoUploaderApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(

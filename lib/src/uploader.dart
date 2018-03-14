@@ -98,17 +98,15 @@ class _PhotoUploaderState extends State<PhotoUploader> {
   }
 
   Widget _buildDescriptionField() {
-    return new Expanded(
-      child: new TextField(
-        decoration: new InputDecoration(labelText: 'Description'),
-        maxLength: 150,
-        maxLines: 5,
-        onChanged: (value) {
-          setState(() {
-            _description = value;
-          });
-        },
-      ),
+    return new TextField(
+      decoration: new InputDecoration(labelText: 'Description'),
+      maxLength: 150,
+      maxLines: 5,
+      onChanged: (value) {
+        setState(() {
+          _description = value;
+        });
+      },
     );
   }
 
