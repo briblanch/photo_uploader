@@ -1,4 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meme_generator/src/app.dart';
+import 'package:photo_uploader/src/app.dart';
 
-void main() => runApp(new MemeGeneratorApp());
+void main() => runApp(new PhotoUploaderApp());

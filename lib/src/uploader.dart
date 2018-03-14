@@ -7,7 +7,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uuid/uuid.dart';
 
-import 'package:meme_generator/src/photo.dart';
+import 'package:photo_uploader/src/photo.dart';
 
 class PhotoUploader extends StatefulWidget {
   @override

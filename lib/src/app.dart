@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:meme_generator/src/photo_grid.dart';
+import 'package:photo_uploader/src/photo_grid.dart';
 
-class MemeGeneratorApp extends StatefulWidget {
+class PhotoUploaderApp extends StatefulWidget {
   @override
-  _MemeGeneratorAppState createState() => new _MemeGeneratorAppState();
+  _PhotoUploaderAppState createState() => new _PhotoUploaderAppState();
 }
 
-class _MemeGeneratorAppState extends State<MemeGeneratorApp> {
+class _PhotoUploaderAppState extends State<PhotoUploaderApp> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(

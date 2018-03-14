@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import 'package:meme_generator/src/photo.dart';
-import 'package:meme_generator/src/uploader.dart';
+import 'package:photo_uploader/src/photo.dart';
+import 'package:photo_uploader/src/uploader.dart';
 
 class PhotoGrid extends StatefulWidget {
   @override
