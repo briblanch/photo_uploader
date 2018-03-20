@@ -1,4 +1,4 @@
-package com.example.memegenerator;
+package com.example.photouploader;
 
 import android.os.Bundle;
 

@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "991754933427",
+    "firebase_url": "https://cloud-firestore-example-483f1.firebaseio.com",
+    "project_id": "cloud-firestore-example-483f1",
+    "storage_bucket": "cloud-firestore-example-483f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991754933427:android:3fbf6c1b074a0847",
+        "android_client_info": {
+          "package_name": "com.example.photouploader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991754933427-jp9fcdtpv6em2d2qk39aqbabl60l7acf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.photouploader",
+            "certificate_hash": "a9e5a121a58c88d30c896c74ecd7b47f89b2448f"
+          }
+        },
+        {
+          "client_id": "991754933427-g3h7kt9hmi9tiem0fh4qko6j43ok92uo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-qqEOK2lQjEhlCLSCoLf4XE5ZBjWjjzo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991754933427-q03ri7hbtq71l9irm7s9evo119afpod9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.flutter.plugins.firebase.firestoreexample"
+              }
+            },
+            {
+              "client_id": "991754933427-g3h7kt9hmi9tiem0fh4qko6j43ok92uo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
