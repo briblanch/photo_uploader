@@ -11,7 +11,7 @@ import 'package:photo_uploader/src/photo.dart';
 
 class PhotoUploader extends StatefulWidget {
   @override
-  _PhotoUploaderState createState() => _PhotoUploaderState();
+  _PhotoUploaderState createState() => new _PhotoUploaderState();
 }
 
 class _PhotoUploaderState extends State<PhotoUploader> {
@@ -37,17 +37,17 @@ class _PhotoUploaderState extends State<PhotoUploader> {
     // Upload the chosen photo
     final task = FirebaseStorage.instance
         .ref()
-        .child('photos/${Uuid().v4()}.jpg')
+        .child('photos/${new Uuid().v4()}.jpg')
         .put(_photo);
 
     // Wait for the upload to finish and retrieve the download url
     final downloadUrl = (await task.future).downloadUrl;
 
-    final photo = Photo(
+    final photo = new Photo(
       downloadUrl.toString(),
       _title,
       _description,
-      DateTime.now().toUtc(),
+      new DateTime.now().toUtc(),
     );
 
     // Upload our photo to the photos ref in our firestore
@@ -62,17 +62,17 @@ class _PhotoUploaderState extends State<PhotoUploader> {
   }
 
   Widget _buildPhotoBox() {
-    return DecoratedBox(
-      decoration: BoxDecoration(color: Theme.of(context).primaryColor),
-      child: SizedBox(
+    return new DecoratedBox(
+      decoration: new BoxDecoration(color: Theme.of(context).primaryColor),
+      child: new SizedBox(
         width: 100.0,
         height: 100.0,
         child: _photo != null
-            ? Center(child: Image.file(_photo))
-            : IconButton(
+            ? new Center(child: new Image.file(_photo))
+            : new IconButton(
                 color: Theme.of(context).accentColor,
                 onPressed: _onChooseImage,
-                icon: Icon(
+                icon: new Icon(
                   Icons.add_a_photo,
                   color: Colors.white,
                 ),
@@ -82,11 +82,11 @@ class _PhotoUploaderState extends State<PhotoUploader> {
   }
 
   Widget _buildTitleField() {
-    return Expanded(
-      child: Padding(
+    return new Expanded(
+      child: new Padding(
         padding: const EdgeInsets.only(left: 15.0),
-        child: TextField(
-          decoration: InputDecoration(labelText: '*Title'),
+        child: new TextField(
+          decoration: new InputDecoration(labelText: '*Title'),
           onChanged: (value) {
             setState(() {
               _title = value;
@@ -98,8 +98,8 @@ class _PhotoUploaderState extends State<PhotoUploader> {
   }
 
   Widget _buildDescriptionField() {
-    return TextField(
-      decoration: InputDecoration(labelText: 'Description'),
+    return new TextField(
+      decoration: new InputDecoration(labelText: 'Description'),
       maxLength: 150,
       maxLines: 5,
       onChanged: (value) {
@@ -112,13 +112,13 @@ class _PhotoUploaderState extends State<PhotoUploader> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Upload A Photo'),
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('Upload A Photo'),
         actions: _photo != null && _title != null
             ? <Widget>[
-                IconButton(
-                  icon: Icon(
+                new IconButton(
+                  icon: new Icon(
                     Icons.cloud_upload,
                     color: Colors.white,
                   ),
@@ -128,12 +128,12 @@ class _PhotoUploaderState extends State<PhotoUploader> {
             : null,
       ),
       body: _uploading
-          ? Center(child: CircularProgressIndicator())
-          : Container(
+          ? new Center(child: new CircularProgressIndicator())
+          : new Container(
               padding: const EdgeInsets.all(10.0),
-              child: Column(
+              child: new Column(
                 children: <Widget>[
-                  Row(
+                  new Row(
                     children: <Widget>[
                       _buildPhotoBox(),
                       _buildTitleField(),

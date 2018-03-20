@@ -8,7 +8,7 @@ import 'package:photo_uploader/src/uploader.dart';
 
 class PhotoGrid extends StatefulWidget {
   @override
-  _MemeGridState createState() => _MemeGridState();
+  _MemeGridState createState() => new _MemeGridState();
 }
 
 class _MemeGridState extends State<PhotoGrid> {
@@ -34,66 +34,65 @@ class _MemeGridState extends State<PhotoGrid> {
     _photosSub?.cancel();
   }
 
-  /// Deserialize the [DocumentSnapshot]s to a [Photo] and update the state
   void _onPhotosRecieved(QuerySnapshot snap) {
     setState(() {
-      _photos = snap.documents.map((d) => Photo.fromJson(d.data)).toList();
+      _photos = snap.documents.map((d) => new Photo.fromJson(d.data)).toList();
     });
   }
 
   void _onFABTapped() {
     Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (_) => PhotoUploader(),
+      new MaterialPageRoute(
+        builder: (_) => new PhotoUploader(),
         fullscreenDialog: true,
       ),
     );
   }
 
   Widget _buildCard(Photo photo) {
-    return Card(
-      child: Column(
+    return new Card(
+      child: new Column(
         children: <Widget>[
-          Padding(
+          new Padding(
             padding: const EdgeInsets.all(5.0),
-            child: Image.network(photo.url),
+            child: new Image.network(photo.url),
           ),
-          Row(
+          new Row(
             children: <Widget>[
-              Expanded(
-                child: Padding(
+              new Expanded(
+                child: new Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Text(
+                  child: new Text(
                     photo.title,
                     textAlign: TextAlign.left,
-                    style: TextStyle(
+                    style: new TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
               ),
-              Padding(
+              new Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Text(
+                child: new Text(
                   '${photo.displayDateString}',
                   textAlign: TextAlign.right,
-                  style: TextStyle(fontSize: 12.0),
+                  style: new TextStyle(fontSize: 12.0),
                 ),
               ),
             ],
           ),
           photo.description != null
-              ? Row(
+              ? new Row(
                   children: <Widget>[
-                    Padding(
+                    new Padding(
                       padding: const EdgeInsets.all(15.0),
-                      child: Text(photo.description),
+                      child: new Text(photo.description),
                     )
                   ],
                 )
-              : Container()
+              : new Container()
         ],
       ),
     );
@@ -101,11 +100,11 @@ class _MemeGridState extends State<PhotoGrid> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Photos'),
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('Photos'),
       ),
-      body: ListView.builder(
+      body: new ListView.builder(
         itemCount: _photos.length,
         itemBuilder: (context, index) {
           final photo = _photos[index];
@@ -113,8 +112,8 @@ class _MemeGridState extends State<PhotoGrid> {
           return _buildCard(photo);
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+      floatingActionButton: new FloatingActionButton(
+        child: new Icon(Icons.add),
         onPressed: _onFABTapped,
       ),
     );
