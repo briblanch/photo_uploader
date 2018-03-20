@@ -464,7 +464,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.memeGenerator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.photouploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -487,7 +487,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.memeGenerator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.photouploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
