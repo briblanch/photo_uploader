@@ -58,9 +58,16 @@ class _PhotoListState extends State<PhotoList> {
           children: <Widget>[
             new Padding(
               padding: const EdgeInsets.all(10.0),
-              child: new Material(
-                child: new Image.network(photo.url),
-                elevation: 2.0,
+              child: new Container(
+                decoration: new BoxDecoration(
+                  border: new Border.all(
+                    color: Theme.of(context).canvasColor,
+                    width: 5.0,
+                  ),
+                ),
+                child: new Image.network(
+                  photo.url,
+                ),
               ),
             ),
             new Row(

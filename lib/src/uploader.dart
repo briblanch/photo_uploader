@@ -58,27 +58,26 @@ class _PhotoUploaderState extends State<PhotoUploader> {
     });
 
     // Dismiss this widget
-    Navigator.pop(context);
+    Navigator.pop(context, true);
   }
 
   Widget _buildPhotoBox() {
-    return new DecoratedBox(
-      decoration: new BoxDecoration(color: Theme.of(context).primaryColor),
-      child: new SizedBox(
-        width: 100.0,
-        height: 100.0,
-        child: _photo != null
-            ? new Center(child: new Image.file(_photo))
-            : new IconButton(
-                color: Theme.of(context).accentColor,
-                onPressed: _onChooseImage,
-                icon: new Icon(
-                  Icons.add_a_photo,
+    return new Container(
+        width: 75.0,
+        height: 75.0,
+        child: new Material(
+          color: Theme.of(context).accentColor,
+          shape: new CircleBorder(),
+          child: _photo != null
+              ? new Center(child: new Image.file(_photo))
+              : new IconButton(
                   color: Colors.white,
+                  onPressed: _onChooseImage,
+                  icon: new Icon(
+                    Icons.add_a_photo,
+                  ),
                 ),
-              ),
-      ),
-    );
+        ));
   }
 
   Widget _buildTitleField() {
