@@ -1,7 +1,7 @@
 import 'package:intl/intl.dart';
 
 class Photo {
-  final DateFormat dateFormatter = new DateFormat.yMMMMd("en_US").add_jm();
+  final DateFormat dateFormatter = new DateFormat.yMd("en_US").add_jm();
 
   final String url;
   final String title;

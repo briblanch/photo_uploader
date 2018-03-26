@@ -7,7 +7,14 @@ class PhotoUploaderApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      theme: workivaTheme,
+      theme: new ThemeData(
+        primaryColor: workivaGreen,
+        primaryColorBrightness: Brightness.dark,
+        canvasColor: canvasColor,
+        accentColor: accentGreen,
+        accentColorBrightness: Brightness.dark,
+        cardColor: workivaCards,
+      ),
       home: new PhotoList(),
     );
   }

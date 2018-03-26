@@ -78,29 +78,26 @@ class _PhotoListState extends State<PhotoList> {
                     child: new Text(
                       photo.title,
                       textAlign: TextAlign.left,
-                      style: new TextStyle(
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.headline,
                     ),
                   ),
                 ),
                 new Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: new Text(
-                    '${photo.displayDateString}',
-                    textAlign: TextAlign.right,
-                    style: new TextStyle(fontSize: 12.0),
-                  ),
+                  child: new Text('${photo.displayDateString}',
+                      textAlign: TextAlign.right,
+                      style: Theme.of(context).textTheme.caption),
                 ),
               ],
             ),
             photo.description != null
                 ? new Row(
                     children: <Widget>[
-                      new Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: new Text(photo.description),
+                      new Expanded(
+                        child: new Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: new Text(photo.description),
+                        ),
                       )
                     ],
                   )
