@@ -8,7 +8,7 @@ import 'package:photo_uploader/src/uploader.dart';
 
 class PhotoList extends StatefulWidget {
   @override
-  _PhotoListState createState() => new _PhotoListState();
+  _PhotoListState createState() => _PhotoListState();
 }
 
 class _PhotoListState extends State<PhotoList> {
@@ -24,7 +24,7 @@ class _PhotoListState extends State<PhotoList> {
         .collection('photos')
         .limit(50)
         .orderBy('timestamp', descending: true)
-        .snapshots
+        .snapshots()
         .listen(_onPhotosRecieved);
   }
 
@@ -36,72 +36,72 @@ class _PhotoListState extends State<PhotoList> {
 
   void _onPhotosRecieved(QuerySnapshot snap) {
     setState(() {
-      _photos = snap.documents.map((d) => new Photo.fromJson(d.data)).toList();
+      _photos = snap.documents.map((d) => Photo.fromJson(d.data)).toList();
     });
   }
 
   void _onFABTapped() {
     Navigator.push(
       context,
-      new MaterialPageRoute(
-        builder: (_) => new PhotoUploader(),
+      MaterialPageRoute(
+        builder: (_) => PhotoUploader(),
         fullscreenDialog: true,
       ),
     );
   }
 
   Widget _buildCard(Photo photo) {
-    return new Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: new Card(
-        child: new Column(
+    return Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Card(
+        child: Column(
           children: <Widget>[
-            new Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: new Container(
-                decoration: new BoxDecoration(
-                  border: new Border.all(
+            Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
                     color: Theme.of(context).canvasColor,
                     width: 5.0,
                   ),
                 ),
-                child: new Image.network(
+                child: Image.network(
                   photo.url,
                 ),
               ),
             ),
-            new Row(
+            Row(
               children: <Widget>[
-                new Expanded(
-                  child: new Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: new Text(
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: Text(
                       photo.title,
                       textAlign: TextAlign.left,
                       style: Theme.of(context).textTheme.headline,
                     ),
                   ),
                 ),
-                new Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: new Text('${photo.displayDateString}',
+                Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: Text('${photo.displayDateString}',
                       textAlign: TextAlign.right,
                       style: Theme.of(context).textTheme.caption),
                 ),
               ],
             ),
             photo.description != null
-                ? new Row(
+                ? Row(
                     children: <Widget>[
-                      new Expanded(
-                        child: new Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: new Text(photo.description),
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Text(photo.description),
                         ),
                       )
                     ],
                   )
-                : new Container()
+                : Container()
           ],
         ),
       ),
@@ -110,12 +110,12 @@ class _PhotoListState extends State<PhotoList> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('Photos'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Photos'),
       ),
-      body: new Container(
-        child: new ListView.builder(
+      body: Container(
+        child: ListView.builder(
           itemCount: _photos.length,
           itemBuilder: (context, index) {
             final photo = _photos[index];
@@ -124,8 +124,8 @@ class _PhotoListState extends State<PhotoList> {
           },
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
-        child: new Icon(Icons.add),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
         onPressed: _onFABTapped,
       ),
     );

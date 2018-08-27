@@ -6,8 +6,8 @@ import 'package:photo_uploader/src/photo_list.dart';
 class PhotoUploaderApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      theme: new ThemeData(
+    return MaterialApp(
+      theme: ThemeData(
         primaryColor: workivaGreen,
         primaryColorBrightness: Brightness.dark,
         canvasColor: canvasColor,
@@ -15,7 +15,7 @@ class PhotoUploaderApp extends StatelessWidget {
         accentColorBrightness: Brightness.dark,
         cardColor: workivaCards,
       ),
-      home: new PhotoList(),
+      home: PhotoList(),
     );
   }
 }

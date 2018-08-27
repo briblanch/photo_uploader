@@ -1,7 +1,7 @@
 import 'package:intl/intl.dart';
 
 class Photo {
-  final DateFormat dateFormatter = new DateFormat.yMd("en_US").add_jm();
+  final DateFormat dateFormatter = DateFormat.yMd("en_US").add_jm();
 
   final String url;
   final String title;
@@ -14,7 +14,7 @@ class Photo {
       : url = json['url'],
         title = json['title'],
         description = json['description'],
-        timestamp = new DateTime.fromMillisecondsSinceEpoch(json['timestamp']);
+        timestamp = DateTime.fromMillisecondsSinceEpoch(json['timestamp']);
 
   Map<String, dynamic> toJson() {
     return {

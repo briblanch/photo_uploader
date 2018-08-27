@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-final workivaGreen = new Color(0xFF66CC00);
-final accentGreen = new Color(0xFFA85d633);
-final workivaCards = new Color(0xFFCBCBCB);
-final canvasColor = new Color(0xFFE3E3E3);
+final workivaGreen = Color(0xFF66CC00);
+final accentGreen = Color(0xFFA85d633);
+final workivaCards = Color(0xFFCBCBCB);
+final canvasColor = Color(0xFFE3E3E3);
 
-// new ThemeData(
+// ThemeData(
 //   primaryColor: workivaGreen,
 //   primaryColorBrightness: Brightness.dark,
 //   canvasColor: canvasColor,
