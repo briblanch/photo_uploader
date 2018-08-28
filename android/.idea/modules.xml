@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/android.iml" filepath="$PROJECT_DIR$/.idea/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.7.4/android/cloud_firestore.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.7.4/android/cloud_firestore.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.2.5/android/firebase_core.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.2.5/android/firebase_core.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_storage-1.0.2/android/firebase_storage.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_storage-1.0.2/android/firebase_storage.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/image_picker-0.4.7/android/image_picker.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/image_picker-0.4.7/android/image_picker.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider-0.4.1/android/path_provider.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider-0.4.1/android/path_provider.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider-0.4.1/android/path_provider-0.4.1-path_provider.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider-0.4.1/android/path_provider-0.4.1-path_provider.iml" />
+    </modules>
+  </component>
+</project>
