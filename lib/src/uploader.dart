@@ -21,8 +21,36 @@ class _PhotoUploaderState extends State<PhotoUploader> {
   String _description;
 
   Future<void> _onChooseImage() async {
+    final source = await showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return Padding(
+          padding: EdgeInsets.only(bottom: 20.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              ListTile(
+                leading: Icon(Icons.photo_camera),
+                title: Text('Take a photo'),
+                onTap: () {
+                  Navigator.pop(context, ImageSource.camera);
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.photo_library),
+                title: Text('Choose from photo library'),
+                onTap: () {
+                  Navigator.pop(context, ImageSource.gallery);
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+
     final pickedImage = await ImagePicker.pickImage(
-      source: ImageSource.gallery,
+      source: source,
       maxHeight: 500.0,
       maxWidth: 500.0,
     );
