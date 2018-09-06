@@ -49,6 +49,8 @@ class _PhotoUploaderState extends State<PhotoUploader> {
       },
     );
 
+    if (source == null) return;
+
     final pickedImage = await ImagePicker.pickImage(
       source: source,
       maxHeight: 500.0,
